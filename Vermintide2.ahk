@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #SingleInstance force
 SendMode input
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -31,6 +31,13 @@ return
 ;关闭挂机脚本
 #p::ExitApp
 
+F2::
+  LLMouse.Move(164,0,1,2)
+  Sleep 40
+  Send {w down}
+  Sleep 6300
+  Send {w up}
+  return 
 
 ;以下是具体实现，可以根据自己需要调整
 Begin_game()
@@ -38,7 +45,7 @@ Begin_game()
   LLMouse.Move(164,0,1,2)
   Sleep 40
   Send {w down}
-  Sleep 6190
+  Sleep 6320
   Send {w up}
   Sleep 300
   Send {e down}
